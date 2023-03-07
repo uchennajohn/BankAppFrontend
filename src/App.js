@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import Register from "./pages/RegisterForm/Register";
+import Login from "./pages/LoginForm/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Withdraw from "./pages/WithdrawForm/Widthdraw";
+import History from "./pages/History/History";
+import Deposit from "./pages/DespositForm/Deposit";
+import Balance from "./pages/Balance/Balance";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import  DataProvider  from "../src/context/authContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <DataProvider>
+        <ToastContainer />
+        <Router>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/transactions/withdraw/:userId" element={<Withdraw/>} />
+            <Route path="/transactions/deposit/:userId" element={< Deposit/>} />
+            <Route path="/transactions/history/:userId" element={< History/>} />
+            <Route path="transactions/balance/:userId" element={< Balance/>} />
+          </Routes>
+        </Router>
+      </DataProvider>
+    </React.Fragment>
   );
 }
 

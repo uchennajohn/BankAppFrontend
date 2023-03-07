@@ -1,0 +1,41 @@
+.background {
+    background-color: #1f243d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .welcome {
+    font-size: 6rem;
+    font-weight: bold;
+    text-shadow: 2px 2px #f1c40f;
+    color: #fff;
+  }
+  
+  .wegro {
+    font-size: 8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px #f1c40f;
+    color: #fff;
+  }
+  
+  .bank {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px #f1c40f;
+    color: #fff;
+  }
+  
+  .buttn {
+    background-color: #f1c40f;
+    border: none;
+    color: #1f243d;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+  
