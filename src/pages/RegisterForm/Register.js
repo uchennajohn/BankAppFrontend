@@ -20,6 +20,7 @@ const Register = () => {
      setFormData({})
 
  }
+ 
   return (
     <div className='register-container'>
         <div className ="bg-background">
